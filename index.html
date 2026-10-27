@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rutvik Natu — AI & Automation Engineer</title>
+  <meta name="description" content="AI and automation engineer in Heidelberg. AI agents, n8n and Zapier automations, tracking that proves impact, and clear communication with every stakeholder.">
+  <meta property="og:title" content="Rutvik Natu — AI & Automation Engineer">
+  <meta property="og:description" content="AI agents, n8n and Zapier automations, and the numbers behind them.">
+  <meta name="theme-color" content="#16202b">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2316202b'/><circle cx='9' cy='16' r='4' fill='%23e9b44c'/><circle cx='23' cy='9' r='3' fill='%2386c5a9'/><circle cx='23' cy='23' r='3' fill='%2386c5a9'/><path d='M13 16 20 10M13 16 20 22' stroke='%23eee8dc' stroke-width='1.6'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="#top" id="brand"></a>
+    <nav aria-label="Sections">
+      <a href="#build">Build</a>
+      <a href="#automate">Automate</a>
+      <a href="#track">Track</a>
+      <a href="#communicate">Communicate</a>
+      <a href="#path">Experience</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <p class="hero-hello">Hi, I'm <span id="hero-name"></span>.</p>
+        <h1>I make work run itself, then prove it did.</h1>
+        <p class="hero-intro" id="hero-intro"></p>
+        <ul class="hero-facts" id="hero-facts"></ul>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#automate">See the automations</a>
+          <a class="btn btn-line" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <figure class="hero-flow">
+        <div class="flow-frame">
+          <div class="flow-head"><span class="dot-live" aria-hidden="true"></span><span id="flow-status">Running</span></div>
+          <svg id="flow-svg" viewBox="0 0 340 470" role="img" aria-labelledby="flow-title"><title id="flow-title">Animated workflow: a lead is enriched, scored by Claude, routed and logged in the CRM.</title></svg>
+        </div>
+        <figcaption id="flow-caption"></figcaption>
+      </figure>
+    </section>
+
+    <!-- PROOF -->
+    <section class="block" id="proof">
+      <div class="block-head">
+        <h2>What changed after I shipped</h2>
+        <p>Measured outcomes from production systems, not prototypes.</p>
+      </div>
+      <div class="impact" id="impact"></div>
+      <div class="ledger" id="ledger"></div>
+    </section>
+
+    <!-- BUILD -->
+    <section class="block stage" id="build">
+      <div class="block-head">
+        <h2><span class="stage-node" aria-hidden="true"></span>Build with AI</h2>
+        <p>Agents, RAG and voice systems that run in front of customers and teams. Open any row for the details.</p>
+      </div>
+      <div class="builds" id="builds"></div>
+    </section>
+
+    <!-- AUTOMATE -->
+    <section class="block stage" id="automate">
+      <div class="block-head">
+        <h2><span class="stage-node" aria-hidden="true"></span>Automate</h2>
+        <p>Workflows in n8n, Zapier, Salesforce and Automation Anywhere. Each one drawn the way it actually runs.</p>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filter by platform"></div>
+      <div class="autos" id="autos" aria-live="polite"></div>
+    </section>
+
+    <!-- TRACK -->
+    <section class="block stage" id="track">
+      <div class="block-head">
+        <h2><span class="stage-node" aria-hidden="true"></span>Track</h2>
+        <p>Nothing ships without a way to tell whether it works. This is the loop every system goes through.</p>
+      </div>
+      <ol class="loop" id="loop"></ol>
+    </section>
+
+    <!-- COMMUNICATE -->
+    <section class="block stage" id="communicate">
+      <div class="block-head">
+        <h2><span class="stage-node" aria-hidden="true"></span>Communicate and translate</h2>
+        <p>The same system, explained so each person can act on it.</p>
+      </div>
+
+      <div class="translate">
+        <div class="translate-bar">
+          <h3>Same fact, two audiences</h3>
+          <div class="toggle" role="tablist" aria-label="Choose audience">
+            <button role="tab" aria-selected="true" data-view="tech">For engineers</button>
+            <button role="tab" aria-selected="false" data-view="plain">For everyone else</button>
+          </div>
+        </div>
+        <ul class="pairs" id="pairs"></ul>
+      </div>
+
+      <div class="talk-grid">
+        <div>
+          <h3>Who I work with</h3>
+          <dl class="audiences" id="audiences"></dl>
+        </div>
+        <div class="talk-side">
+          <h3>Languages</h3>
+          <ul class="langs" id="langs"></ul>
+          <div class="community" id="community"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="block" id="path">
+      <div class="block-head">
+        <h2>Where I've done it</h2>
+      </div>
+      <ol class="timeline" id="timeline"></ol>
+
+      <div class="foundation">
+        <div>
+          <h3>Education and certificates</h3>
+          <ul class="edu" id="edu"></ul>
+        </div>
+        <div>
+          <h3>Toolbox</h3>
+          <div class="stack" id="stack"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h2>Have a process that should run on its own?</h2>
+      <p>Tell me what it is today. I'll tell you what it could look like, and how we'll know it worked.</p>
+      <div class="contact-links" id="contact-links"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Built by hand in plain HTML, CSS and JavaScript. Hosted on GitHub Pages.</p>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
