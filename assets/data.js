@@ -63,8 +63,8 @@ window.SITE = {
     { value: "~150", unit: "calls a day", text: "handled by the AI voice agent I built in 14 days for a 36-person sales team" },
     { value: "110", unit: "technicians", text: "scheduled across Germany at run time by the Autoscheduler I owned" },
     { value: "~10 h", unit: "a week saved", text: "by connecting the Kraken platform to Salesforce" },
-    { value: "~150", unit: "requests a day", text: "flowing through the expense-claims automation" },
-    { value: "~30%", unit: "of automations", text: "now maintained by the departments I trained, not by me" },
+    { value: "~150", unit: "requests a day", text: "flowing through the expense-claims " },
+    { value: "~30%", unit: "of s", text: "now maintained by the departments I trained, not by me" },
     { value: "20", unit: "customer journeys", text: "optimised and reported weekly from a grid-communication dashboard" }
   ],
 
@@ -192,20 +192,68 @@ window.SITE = {
       flow: ["Job scheduled", "Collect customer details", "Slack message to technician"],
       result: "110 technicians told where to go, with what they need, the moment they are booked."
     },
-    {
-      title: "Smart-meter data into HubSpot",
-      platform: "Zapier",
-      where: "Octopus Energy",
-      flow: ["Smart-meter API", "Transform", "HubSpot record"],
-      result: "Sales and service see meter data on the customer record without a manual export."
-    },
-    {
-      title: "HubSpot to Salesforce migration",
-      platform: "Zapier",
-      where: "Daulto GmbH",
-      flow: ["HubSpot API", "Map fields", "Salesforce accounts"],
-      result: "Around 400 accounts moved across CRMs."
-    },
+   
+{
+  title: "Smart-meter data into HubSpot",
+  platform: "Zapier",
+  where: "Octopus Energy",
+  flow: ["Smart-meter API", "Transform", "HubSpot record"],
+  result: "Sales and service see meter data on the customer record without a manual export."
+},
+{
+  title: "HubSpot to Salesforce migration",
+  platform: "Zapier",
+  where: "Daulto GmbH",
+  flow: ["HubSpot API", "Map fields", "Salesforce accounts"],
+  result: "Around 400 accounts moved across CRMs."
+},
+{
+  title: "Lead Aggregator",
+  platform: "Zapier",
+  where: "Lead operations",
+  flow: ["5 lead sources", "Source-specific filtering", "Deduplicate and validate", "Create Salesforce leads"],
+  result: "Automated lead supply of around 500 leads per day into Salesforce.",
+  details: [
+    "Collected leads from five different sources and applied separate filtering rules for each provider.",
+    "Standardised, validated and routed qualified leads into Salesforce so sales teams received consistent, usable records."
+  ]
+},
+{
+  title: "Lead Reclamation Process",
+  platform: "Zapier",
+  where: "Lead operations",
+  flow: ["Scheduled run", "Collect errored leads", "Provider-specific report", "Return recoverable leads"],
+  result: "Recovered errored leads worth around EUR 700 per month.",
+  details: [
+    "Built a scheduled workflow that identified all failed or errored leads across providers.",
+    "Generated a detailed report personalised to each lead provider’s conditions and requirements.",
+    "Enabled providers to correct and resubmit recoverable leads instead of losing them permanently."
+  ]
+},
+{
+  title: "Octopus Customer Migration",
+  platform: "Zapier",
+  where: "Octopus Energy takeover",
+  flow: ["HubSpot customers", "Kraken data matching", "Field transformation", "Salesforce import"],
+  result: "Migrated existing customers to Salesforce and saved almost 60 hours of manual work.",
+  details: [
+    "Migrated existing customer records from HubSpot to Salesforce following the Octopus takeover.",
+    "Matched and manipulated each data point to satisfy Salesforce field requirements and Kraken data structures.",
+    "Reduced a highly manual migration process to a repeatable automated workflow."
+  ]
+},
+{
+  title: "Salesforce to Praxedo Work Orders",
+  platform: "Zapier",
+  where: "Field service operations",
+  flow: ["Salesforce repair request", "Customer matching", "Praxedo API", "Work order created"],
+  result: "Automatically created Praxedo work orders and saved around 30 hours per week.",
+  details: [
+    "Connected Salesforce and Praxedo through the Praxedo API.",
+    "When a repair or maintenance job was created in Salesforce, the workflow found and matched the specific customer.",
+    "Created a Praxedo work order automatically, carrying across all relevant customer and job information."
+  ]
+},
     {
       title: "Heat-load calculator",
       platform: "Salesforce",
